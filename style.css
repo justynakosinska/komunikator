@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    min-height:100vh;
+    background: white;
+    padding:0 10px;
+}
+.wrap{
+background: #bed8ee;
+width: 450px;
+}
+.formEntry{
+    padding:20px 30px;
+}
+.formEntry header{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+.error{
+    padding: 8px 10px;
+    text-align: center;
+    color:#721c24;
+    background: #eb757f;
+    display:none;
+}
+.field{
+    display: flex;
+    margin-bottom:10px;
+    flex-direction: column;
+}
+.input input{
+    height:30px;
+    width:100%;
+    padding:0 10px;
+}
+.button input{
+    height:40%;
+    color:black;
+    cursor:pointer;
+    margin-top:13px;
+}
+.formEntry .link{
+    text-align: center;
+    margin:10px 0;
+}
+.accounts{
+    padding: 20px 30px;
+}
+.accounts header,
+.listOfAccounts a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-bottom:15px;
+    border-bottom:1px solid black;
+}
+.wrap img{
+    object-fit:cover;
+}
+.accounts header img{
+    height:50px;
+    width: 50px;
+}
+:is(.accounts, .listOfAccounts) .content{
+    display:flex;
+    align-items:center;
+}
+:is(.accounts, .listOfAccounts) .content .specifics{
+    color:black;
+    margin-left:20px;
+}
+:is(.accounts, .listOfAccounts) .specifics span{
+    font-weight: bold;
+}
+.logoutLink{
+    display:block;
+    color:black;
+    padding:7px 15px;
+    border:1px solid black;
+}
+.accounts .searchBar{
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:20px 0;
+}
+.accounts .searchBar input{
+    position:absolute;
+    height: 40px;
+    width:calc(100% - 50px);
+    padding:0 10px;
+    border: 1px solid black;
+    opacity:0;
+    pointer-events:none;
+}
+.accounts .searchBar input.active{
+opacity: 1;
+pointer-events: auto;
+}
+.accounts .searchBar input.show{
+    opacity:1;
+}
+.accounts .searchBar button{
+    position:relative;
+    z-index: 1;
+    width:45px;
+    height:40px;
+}
+.listOfAccounts{
+    max-height:320px;
+    overflow:auto;
+}
+
+.listOfAccounts a{
+    padding-bottom:10px;
+    margin-bottom:15px;
+    padding-right:15px;
+    border-bottom-color:black;
+}
+.listOfAccounts a img{
+    height:40px;
+    width:40px;
+}
+.listOfAccounts a .specifics p{
+    color:grey;
+}
+a .dot{
+    color:green;
+    padding-left:10px;
+}
+a .dot.offline{
+    color:red;
+}
+.chat header{
+    display:flex;
+    align-items:center;
+    padding:15px 30px;
+    border-bottom: 1px solid black;
+
+}
+.chat header img{
+    height:45px;
+    width:45px;
+    margin:0 15px;
+}
+.chat header .specifics span{
+font-weight: bold;
+}
+.chatArea{
+position:relative;
+min-height:500px;
+max-height:500px;
+overflow-y:auto;
+padding:10px 30px 20px 30px;
+}
+.chatArea .text{
+    position:absolute;
+    top:45%;
+    left:50%;
+    width:calc(100% - 50px);
+    text-align: center;
+    transform:translate(-50%,-50%);
+}
+.chatArea .chatmes{
+    margin:15px 0;
+}
+.chatArea .chatmes p{
+    word-wrap:break-down;
+    padding:8px 16px;
+}
+.sent{
+    display:flex;
+}
+.sent .specifics{
+    margin-left:auto;
+    max-width: calc(100% - 130px);
+}
+.sent .specifics p{
+    background:grey;
+    color:white;
+}
+.receive{
+    display:flex;
+    align-items:flex-end;
+}
+.receive img{
+    height:35px;
+    width:35px;
+}
+.receive .specifics{
+    margin-right:auto;
+    margin-left:10px;
+    max-width:calc(100% - 130px);
+}
+.receive .specifics p{
+    background:white;
+    color:grey;
+}
+.writeames{
+    padding:20px 30px;
+    display:flex;
+    justify-content: space-between;
+}
+.writeames input{
+    height:45px;
+    width:calc(100% - 58px);
+    padding:0 13px;
+}
+.writeames button{
+    width:55px;
+}
